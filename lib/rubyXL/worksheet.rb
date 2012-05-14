@@ -586,17 +586,6 @@ class Worksheet < PrivateClass
         end
       end
     end
-
-    #shift column styles
-    #shift col styles 'left'
-    @cols.each do |col|
-      if Integer(col[:attributes][:min]) >= col_index
-        col[:attributes][:min] = (Integer(col[:attributes][:min]) - 1).to_s
-      end
-      if Integer(col[:attributes][:max]) >= col_index
-        col[:attributes][:max] = (Integer(col[:attributes][:max]) - 1).to_s
-      end
-    end
   end
 
   # inserts column at col_index, pushes everything right, takes styles from column to left
