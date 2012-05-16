@@ -230,6 +230,7 @@ module RubyXL
     end
 
      def is_date_format?(num_fmt)
+      return false
       skip_chars = ['$', '-', '+', '/', '(', ')', ':', ' ']
       num_chars = ['0', '#', '?']
       non_date_formats = ['0.00E+00', '##0.0E+0', 'General', 'GENERAL', 'general', '@']
