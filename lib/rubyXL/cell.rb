@@ -26,6 +26,7 @@ module RubyXL
     end
 
     def is_date?
+      return false
       if !@value.is_a?(String)
         if @workbook.num_fmts
           num_fmt_id = xf_id()[:numFmtId]
